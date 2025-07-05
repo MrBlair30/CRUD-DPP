@@ -1,0 +1,39 @@
+<h2 class="titulo">📦 Lista de Productos</h2>
+
+<div class="tabla-container">
+  <ng-container *ngIf="productos$ | async as productos; else cargando">
+    <table class="tabla-productos" *ngIf="productos.length > 0; else sinProductos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.precio | currency:'USD' }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td class="acciones">
+            <button class="btn editar" (click)="editarProducto(producto)">Editar</button>
+            <button class="btn eliminar" (click)="eliminarProducto(producto)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
+  <ng-template #cargando>
+    <p>Cargando productos...</p>
+  </ng-template>
+
+  <ng-template #sinProductos>
+    <p>No hay productos aún.</p>
+  </ng-template>
+</div>
+
+<div class="boton-agregar">
+  <button routerLink="/nuevo" class="btn agregar">+ Agregar Producto</button>
+</div>

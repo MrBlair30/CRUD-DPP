@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: darkblue;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 8px;
+  text-align: left;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+input, textarea {
+  width: 300px;
+  padding: 5px;
+}
