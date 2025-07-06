@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/api/productos', productosRoutes);
 
 // DB
-mongoose.connect('mongodb://127.0.0.1:27017/catalogo', {
+mongoose.connect('mongodb+srv://blair:blair@db-dbp.alqeii7.mongodb.net/catalogo?retryWrites=true&w=majority&appName=DB-DBP', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
