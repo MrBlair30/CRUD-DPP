@@ -82,7 +82,7 @@
   user-select: none;
 }
 
-/* RESPONSIVE: Ajustes para < 400px */
+/* RESPONSIVE 400px */
 @media (max-width: 400px) {
   .nav-principal {
     gap: 8px;

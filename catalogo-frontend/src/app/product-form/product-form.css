@@ -84,7 +84,7 @@ body {
   transform: scale(0.98);
 }
 
-/* MEDIA QUERY para pantallas muy pequeñas (<400px) */
+/* Responsive 400px */
 @media (max-width: 400px) {
   .form-container {
     padding: 16px;
